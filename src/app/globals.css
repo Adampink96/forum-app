@@ -14,31 +14,10 @@
   }
 }
 
-/* body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-} */
-/* a {
-  color: white;
-  padding: 5px;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-a:hover {
-  background-color: darkgrey;
-}
-a:active {
-  background-color: white;
-}
-a:visited {
-  background-color: lightgray;
-} */
-
 h1 {
   font-size: 2rem;
   font-weight: bold;
-  color: #333;
+  color: white;
   margin-bottom: 20px;
   text-align: center;
 }
@@ -146,17 +125,12 @@ button:hover {
   background-color: #4a8bc2;
 }
 
-/* .comments {
-  height: 60px;
-} */
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Overall container */
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f7f6;
@@ -164,7 +138,6 @@ body {
   padding: 20px;
 }
 
-/* Feed container */
 h3 {
   font-size: 1.2rem;
   color: #333;
@@ -215,20 +188,17 @@ div:hover {
   background-color: #0056b3;
 }
 
-/* Styling for comment text */
 p {
   margin-top: 10px;
   font-size: 1rem;
   color: #555;
 }
 
-/* Username style */
 p span.username {
   font-weight: bold;
   color: #007bff;
 }
 
-/* Post Title style */
 h3 {
   font-size: 1.1rem;
   color: #222;

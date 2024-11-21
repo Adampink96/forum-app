@@ -1,6 +1,11 @@
+import Image from "next/image";
 import Link from "next/link";
+import { db } from "@/utils/db";
+export default async function Home() {
+  const result = await db.query(`SELECT * FROM movies`);
+  const movies = result.rows;
+  console.log(movies);
 
-export default function Home() {
   return (
     <div>
       <h2>Home</h2>
@@ -16,6 +21,18 @@ export default function Home() {
         footage horror—where every clip might just leave you questioning what's
         real. Join the fear today!
       </p>
+
+      <h3>few movie suggetions to check out</h3>
+      {movies.map((movie) => {
+        return (
+          <div key={movie.id}>
+            <h3>
+              {movie.title} - {movie.year}
+            </h3>
+            <img src={movie.url} alt="poster" />
+          </div>
+        );
+      })}
     </div>
   );
 }
