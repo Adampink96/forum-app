@@ -14,8 +14,228 @@
   }
 }
 
-body {
+/* body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+} */
+/* a {
+  color: white;
+  padding: 5px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+a:hover {
+  background-color: darkgrey;
+}
+a:active {
+  background-color: white;
+}
+a:visited {
+  background-color: lightgray;
+} */
+
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+nav {
+  background-color: #007bff;
+  padding: 10px 0;
+  margin-bottom: 20px;
+  border-radius: 6px;
+}
+
+a {
+  color: white;
+  font-size: 1.1rem;
+  text-decoration: none;
+  padding: 10px 15px;
+  margin: 0 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+a:hover {
+  background-color: #0056b3;
+  color: white;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 20px;
+  padding: 10px;
+}
+
+input,
+textarea,
+select {
+  border: none;
+  outline: none;
+  font-family: "Arial", sans-serif;
+  color: black;
+}
+
+textarea {
+  width: 30%;
+  padding: 10px 15px;
+  margin: 8px 0;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #5b9bd5;
+  background-color: #fff;
+  box-shadow: 0 0 8px rgba(91, 155, 213, 0.3);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #aaa;
+  font-style: italic;
+  opacity: 1;
+}
+
+input:hover,
+textarea:hover {
+  border-color: #888;
+  background-color: #f0f0f0;
+}
+.input-icon {
+  position: relative;
+}
+
+.input-icon input {
+  padding-left: 30px;
+}
+
+.input-icon i {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #aaa;
+}
+
+input[type="submit"],
+button {
+  padding: 12px 20px;
+  background-color: #5b9bd5;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover,
+button:hover {
+  background-color: #4a8bc2;
+}
+
+/* .comments {
+  height: 60px;
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Overall container */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f7f6;
+  color: #333;
+  padding: 20px;
+}
+
+/* Feed container */
+h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+div {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+  padding: 15px;
+  transition: box-shadow 0.3s ease;
+}
+
+div:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.comments {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.comments input,
+.comments button {
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: #fff;
+}
+
+.comments input {
+  width: calc(100% - 20px);
+}
+
+.comments button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.comments button:hover {
+  background-color: #0056b3;
+}
+
+/* Styling for comment text */
+p {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Username style */
+p span.username {
+  font-weight: bold;
+  color: #007bff;
+}
+
+/* Post Title style */
+h3 {
+  font-size: 1.1rem;
+  color: #222;
+  font-weight: bold;
+}
+
+h3 span {
+  font-weight: normal;
+  color: #777;
 }
