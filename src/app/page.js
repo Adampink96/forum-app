@@ -29,7 +29,8 @@ export default async function Home() {
             <h3>
               {movie.title} - {movie.year}
             </h3>
-            <img src={movie.url} alt="poster" />
+            {/* <img src={movie.url} alt="poster" /> */}
+            {/* <Image src={movie.url} alt="poster" width={150} height={100} /> */}
           </div>
         );
       })}

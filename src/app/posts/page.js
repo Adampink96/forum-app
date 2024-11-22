@@ -1,9 +1,15 @@
+import CommentForm from "@/component/comment";
 import { db } from "@/utils/db";
+import Link from "next/link";
 
 export default async function Posts() {
   const result = await db.query(`SELECT * FROM posts`);
   const posts = result.rows;
   console.log(posts);
+
+  const commentresult = await db.query(`SELECT * FROM comments`);
+  const comments = commentresult.rows;
+  console.log(comments);
 
   async function handleAddPost(formData) {
     "use server";
@@ -29,17 +35,22 @@ export default async function Posts() {
 
         <input type="text" placeholder="post" name="post" />
         <button>submit</button>
+        <button>delete post</button>
       </form>
       <h3>User posts</h3>
-      {posts.map((post) => {
+      {posts.map((post, comment) => {
         return (
-          <div key={post.id}>
-            <h3>
-              {post.title} - {post.username}
-            </h3>
+          <Link key={post.id} href={`/posts/${post.id}`}>
+            <h3>{post.title}</h3>
+            <p>{post.username}</p>
 
             <p>{post.post}</p>
-          </div>
+            <p>
+              {comment.username}-{comment.comment}
+            </p>
+
+            <CommentForm />
+          </Link>
         );
       })}
     </div>
