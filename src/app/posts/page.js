@@ -38,17 +38,22 @@ export default async function Posts() {
         <button>delete post</button>
       </form>
       <h3>User posts</h3>
-      {posts.map((post, comment) => {
+      {posts.map((post) => {
         return (
           <Link key={post.id} href={`/posts/${post.id}`}>
             <h3>{post.title}</h3>
             <p>{post.username}</p>
 
             <p>{post.post}</p>
-            <p>
-              {comment.username}-{comment.comment}
-            </p>
-
+            {comments.map((comment) => {
+              return (
+                <div key={comment.post_id}>
+                  <p>
+                    {comment.username}-{comment.comment}-{comment.post_id}
+                  </p>
+                </div>
+              );
+            })}
             <CommentForm />
           </Link>
         );

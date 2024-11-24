@@ -49,6 +49,7 @@ export default async function comments() {
             <form className="comments" action={handleAddPost}>
               <input type="text" placeholder="username" name="username" />
               <input type="text" placeholder="comment" name="comment" />
+              <input type="hidden" name="post_id" />
               <button>submit</button>
             </form>
           </div>
